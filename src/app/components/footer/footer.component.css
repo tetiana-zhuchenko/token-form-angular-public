@@ -23,3 +23,12 @@
   cursor: pointer;
   color: var(--font-color-primary);
 }
+
+@media (max-width: 600px) {
+  .footerContainer {
+    flex-direction: column;
+    margin: 8px;
+    gap: 8px;
+    align-items: center;
+  }
+}

@@ -183,3 +183,9 @@
 .active-chain {
   background: var(--bg-secondary);
 }
+
+@media (max-width: 600px) {
+  .buttonSubmit {
+    margin-top: 16px;
+  }
+}

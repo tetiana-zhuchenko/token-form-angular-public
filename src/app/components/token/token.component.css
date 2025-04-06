@@ -39,3 +39,9 @@
   color: var(--bg-secondary);
   margin-top: 1rem;
 }
+
+@media (max-width: 600px) {
+  .container {
+    width: 320px;
+  }
+}

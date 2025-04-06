@@ -20,3 +20,9 @@
 .navLink:active {
   color: var(--bg-secondary);
 }
+
+@media (max-width: 600px) {
+  .nav {
+    margin-left: 0;
+  }
+}
