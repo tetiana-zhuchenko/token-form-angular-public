@@ -1,0 +1,9 @@
+<nav>
+  <ul class="nav">
+    @for (link of initialNavLinks; track $index) {
+    <li>
+      <a [href]="link.href" class="navLink">{{ link.title }}</a>
+    </li>
+    }
+  </ul>
+</nav>

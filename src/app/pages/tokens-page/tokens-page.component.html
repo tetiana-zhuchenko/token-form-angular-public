@@ -1,0 +1,14 @@
+<main class="main">
+  <div class="wrapper">
+    <button type="button" class="button" (click)="backClicked()">Back</button>
+    <h1 class="title">My Tokens List</h1>
+
+    <ul class="itemsList">
+      @for( token of tokens(); track token.id){
+      <li>
+        <app-token [token]="token" />
+      </li>
+      }
+    </ul>
+  </div>
+</main>

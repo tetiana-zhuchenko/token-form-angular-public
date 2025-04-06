@@ -1,0 +1,28 @@
+<div>
+  <ul class="container">
+    <li class="tokenInfo">
+      <p class="name">Token Name:</p>
+      <p class="value">{{ token()?.tokenName }}</p>
+    </li>
+    <li class="tokenInfo">
+      <p class="name">Company:</p>
+      <p class="value">{{ token()?.company }}</p>
+    </li>
+    <li class="tokenInfo">
+      <p class="name">Symbol:</p>
+      <p class="value">{{ token()?.symbol }}</p>
+    </li>
+    <li class="tokenInfo">
+      <p class="name">Maximum token supply:</p>
+      <p class="value">{{ token()?.tokenSupply }}</p>
+    </li>
+    <li class="tokenInfo">
+      <p class="name">Blockchain:</p>
+      <p class="value">{{ token()?.blockchain }}</p>
+    </li>
+    <li class="tokenInfo">
+      <p class="name">Supply:</p>
+      <p class="value">{{ token()?.enabled ? "Enabled" : "Disabled" }}</p>
+    </li>
+  </ul>
+</div>

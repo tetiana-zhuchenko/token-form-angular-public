@@ -1,0 +1,85 @@
+:root {
+  --font-color-primary: #000000;
+  --font-color-secondary: #727272;
+  --font-color-complimentary: #ffffff;
+
+  --font-roboto: "Roboto", san-serif;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #c50000;
+  --hover: #f01111;
+  --active: #7f3030;
+
+  --border: 0.1rem solid #bbbbbb;
+  --border-radius: 0.8rem;
+
+  --max-width: 100rem;
+  --footer-height: 5.2rem;
+  --header-height: 9.8rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-size: 62.7%;
+  min-height: 100dvh;
+  height: 100%;
+}
+
+body {
+  color: var(--font-color-primary);
+  background: var(--bg-primary);
+}
+
+html {
+  font-family: var(--font-roboto);
+}
+
+.button {
+  font-family: var(--font-roboto);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  color: var(--font-color-primary);
+  text-align: center;
+  padding: 0.6rem 1.1rem;
+  border: var(--border);
+  border-radius: 2.8rem;
+  background-color: var(--bg--primary);
+}
+
+.button:hover {
+  background: var(--hover);
+}
+
+.button:active {
+  background: var(--active);
+}
+
+.activeBtn {
+  font-family: var(--font-roboto);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  color: var(--font-color-complimentary);
+  text-align: center;
+  padding: 0.7rem 1.1rem;
+  border: none;
+  border-radius: 2.8rem;
+  background-color: var(--bg-secondary);
+}
+
+.activeBtn:hover {
+  background: var(--hover);
+}
+
+.activeBtn:active {
+  background: var(--active);
+}

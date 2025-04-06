@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  gap: 3.1rem;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin-left: 5rem;
+}
+
+.navLink {
+  text-decoration: none;
+  font-family: var(--font-roboto);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: var(--font-color-primary);
+}
+
+.navLink:hover,
+.navLink:active {
+  color: var(--bg-secondary);
+}

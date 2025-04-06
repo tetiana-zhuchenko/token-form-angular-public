@@ -1,0 +1,113 @@
+<form action="" class="form" [formGroup]="tokenForm" (ngSubmit)="onSubmit()">
+  <div class="formItem">
+    <label for="company" class="label">Company</label>
+    <select
+      formControlName="company"
+      name="company"
+      id="company"
+      class="input-select"
+    >
+      @for (company of initialCompanies; track $index) {
+      <option [value]="company.title">
+        {{ company.title }}
+      </option>
+      }
+    </select>
+  </div>
+
+  <div class="formItem">
+    <label for="tokenName" class="label">Token Name</label>
+    <input
+      formControlName="tokenName"
+      class="input"
+      type="text"
+      name="tokenName"
+      id="tokenName"
+      placeholder="ex: Bitcoin"
+      title="tokenName"
+      required
+    />
+    @if(isControlInvalid("tokenName")){
+    <p class="errorMessage">Invalid input</p>
+    } @if(hasError('tokenName','wrongLanguage')){
+    <p class="errorMessage">Use only english letters</p>
+    }
+  </div>
+
+  <div class="formItem">
+    <label for="symbol" class="label">Symbol</label>
+    <input
+      formControlName="symbol"
+      class="input"
+      type="text"
+      name="symbol"
+      id="symbol"
+      placeholder="ex: BTC"
+      title="symbol"
+      required
+    />
+    @if(isControlInvalid("symbol")){
+    <p class="errorMessage">Invalid input</p>
+    } @if(tokenForm.controls.symbol.hasError('wrongLanguage')){
+    <p class="errorMessage">Use only english letters</p>
+    }
+  </div>
+
+  <div class="formItem">
+    <label for="tokenSupply" class="label">Maximum token supply</label>
+    <input
+      formControlName="tokenSupply"
+      class="input"
+      type="number"
+      name="tokenSupply"
+      id="tokenSupply"
+      placeholder="ex: 100000"
+      title="tokenSupply"
+      min="0"
+      max="10000000"
+      required
+    />
+    @if(isControlInvalid("tokenSupply")){
+    <p class="errorMessage">Invalid input</p>
+    }
+  </div>
+
+  <div>
+    <p class="title">Blockchain</p>
+    <div class="wrapper">
+      <button
+        (click)="ethereumClick()"
+        class="button"
+        type="button"
+        [ngClass]="{ 'active-chain': blockchain() === 'Ethereum' }"
+      >
+        Enthereum
+      </button>
+      <button
+        (click)="bscClick()"
+        class="button"
+        type="button"
+        [ngClass]="{ 'active-chain': blockchain() === 'Binance Smart Chain' }"
+      >
+        Binance Smart Chain
+      </button>
+    </div>
+  </div>
+
+  <div>
+    <p class="checkboxRadioTitle">Supply</p>
+    <div class="checkboxRadio">
+      <input
+        class="inputCheckboxRadio"
+        type="checkbox"
+        name="enabled"
+        id="enabled"
+        title="enabled"
+        formControlName="enabled"
+      />
+      <label htmlFor="enabled" class="labelCheckboxRadio"> Enabled </label>
+    </div>
+  </div>
+
+  <button type="submit" class="buttonSubmit">SAVE DRAFT</button>
+</form>
